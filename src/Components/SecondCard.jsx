@@ -6,9 +6,9 @@ const SecondCard = () => {
 
   return (
     <>
-    <div className='flex justify-center items-center '>
-        <div className='flex justify-start items-center gap-2 px-2 w-[160px] border border-black rounded-xl mb-5' >
-            <img className='h-[8px] w-[8px]' src="/images/Background.png" alt="img" />
+    <div className='flex justify-center items-center pt-[4rem]'>
+        <div className='flex justify-start items-center gap-2 px-2 w-[160px] border rounded-xl mb-5' >
+            <div className='border-4 border-[#00008B] rounded-full'></div>
             <h1 className='text-[16px] font-medium' >Sample Use Case</h1>
         </div>
         </div>

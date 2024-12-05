@@ -3,9 +3,11 @@ import Alerts from './Components/Alerts';
 import DownloadApp from './Components/DownloadApp';
 import FirstCard from './Components/FirstCard';
 import Footer from './Components/Footer';
+import Footer2 from './Components/Footer2';
 import FourthCard from './Components/FourthCard';
 import Header from './Components/Header';
 import MyMarquee from './Components/MyMarquee';
+import Nav2 from './Components/Nav2';
 import Navbaar from './Components/Navbaar';
 import News from './Components/News';
 import SecondCard from './Components/SecondCard';
@@ -17,10 +19,10 @@ function App() {
 
   return (
     <>
-    <Navbaar navItems={navItems}/>
+    {/* <Navbaar navItems={navItems}/> */}
+    <Nav2/>
      <Header/>
      <MyMarquee/>   
-     {/* horizontal errr */}
      <FirstCard/>
      <SecondCard/>
      <ThirdCard />
@@ -29,6 +31,7 @@ function App() {
      {/* <DownloadApp/> */}
      {/* <News/> */}
      {/* <Footer/> */}
+     <Footer2/>
 
     </>
   );

@@ -4,10 +4,11 @@ import React from 'react'
 const FirstCard = () => {
     let arr=[{text1:"30%",text2:"(Inventory Optimization) increase in Demand forecasting accuracy.",text3:"Our AI-powered feature leads to a reduction in waste by 12% due to better alignment of inventory with actual market demand."},{text1:"50%",text2:"(Production Efficiency) reduction in idle time",text3:"AI-driven algorithm leads to a 10% increase in throughput and a 7% reduction in labor costs."},{text1:"99%",text2:"(Supply chain and procurement) on-time delivery",text3:"Predictive analytics identifies supply chain disruptions in advance, reducing delays by 70%,"},{text1:"25%",text2:"(Customer demand Adjustments)  improvement in stock availability during peak periods.",text3:"By utilizing AI-driven real-time demand sensing, the company can adjust production schedules and inventory in response to shifting demand, improving stock availability"},]
   return (
-    <div className='py-5 bg-[#f3f3f3]'>
+    <div className='py-5 bg-[#f3f3f3] '>
         <div className='flex justify-center items-center '>
-        <div className='flex justify-start items-center gap-2 px-2 w-[160px] border border-black rounded-xl mb-5' >
-            <img className='h-[8px] w-[8px]' src="/images/Background.png" alt="img" />
+        <div className='flex justify-start items-center gap-2 px-2 w-[160px] border rounded-xl mb-5' >
+            {/* <img className='h-[8px] w-[8px]' src="/images/Background.png" alt="img" /> */}
+            <div className='bg-[#00008B] border-4 border-[#00008B] rounded-full'></div>
             <h1 className='text-[16px] font-medium' >Sample Use Case</h1>
         </div>
         </div>

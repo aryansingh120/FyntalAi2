@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,13 +10,17 @@ const Navbaar = ({navItems}) => {
   </svg>
  
   let [display,setDisplay]=useState(false);
+
+ 
   
   return (
    <div className='sm:px-[7vw] px-[1vw] pt-[1rem] sticky top-0 bg-white  z-50'>
     <nav className=' flex  justify-between rounded-2xl py-[.8rem] px-[1vw] shadow-lg'>
         <div className='flex gap-[.6rem] items-start sm:items-center'>
-            <span>{icon}</span>
-            <p className='font-bold capitalize text-[1.4rem]'>payble</p>
+            {/* <span>{icon}</span> */}
+            <img src="/images/fyntl3.png" alt="img not available" className='h-[2.2rem]'
+            />
+            <p className='font-bold capitalize text-[1.4rem]'>Fyntl AI</p>
         </div>
         <div className={`${(display===false)?"hidden":"flex"} sm:flex sm:w-[80%] w-auto justify-between flex-col sm:flex-row gap-[1rem] sm:gap-0`}>
         <ul className='flex flex-col sm:flex-row  items-center gap-[4vw] mt-[3rem] sm:mt-0 pr-[6rem] sm:pr-0'>
@@ -32,7 +36,7 @@ const Navbaar = ({navItems}) => {
             </ul>
             <button className=' capitalize flex-shrink-0 text-white font-bold bg-black px-[1rem] py-[.2rem] mr-[6rem] sm:mr-0 rounded-md'>free remix</button>
         </div>
-        <div className='sm:hidden'>
+        <div className='sm:hidden border-2'>
         <span onClick={()=>setDisplay(!display)}>{hamIcon}</span>
 
         </div>

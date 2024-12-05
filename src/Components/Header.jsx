@@ -1,23 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Header = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const calculateTransform = () => {
-    const maxScroll = 400; 
-    const tilt = Math.max(0, 20 - (scrollY / maxScroll) * 20); 
-    return tilt;
-  };
-
   let playIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-[black]">
       <path
@@ -27,12 +10,19 @@ const Header = () => {
       />
     </svg>
   );
+  let btn1=<a href="#_" className="relative inline-flex items-center justify-start px-10 py-3  overflow-hidden font-medium transition-all bg-[#00008B] rounded-xl group w-[100%] lg:w-auto">
+  <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#00008B] rounded group-hover:-mr-4 group-hover:-mt-4">
+      <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+  </span>
+  <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-[#00008B] rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+  <span class="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white capitalize">join Waitlist</span>
+</a>
 
   return (
     <div className="pt-[5rem]">
       <div className="flex justify-center">
         <div className="flex justify-center items-center gap-[5px] border rounded-full px-[1rem] py-[.3rem]">
-          <div className="border-[4px] border-[green] rounded-full mt-[3.5px]"></div>
+          <div className="border-[4px] border-[#00008B] rounded-full"></div>
           <span className="text-[#666666] font-medium">Unlock Future of Business with Fyntl AI</span>
         </div>
       </div>
@@ -53,15 +43,20 @@ const Header = () => {
         </button>
       </div>
 
-      <div
-        className="flex justify-center"
-        style={{
-          transform: `perspective(900px) rotateX(${calculateTransform()}deg)`, 
-          transition: "transform 0.1s ease-out",
-        }}
-      >
-        <img src="./Images/screen1.png" alt="Screen" className="w-[100%] max-w-[1250px]" />
+      <div className="flex justify-center mt-[3rem]">
+        <div className="border rounded-xl w-[60%] lg:w-[40%] flex flex-col gap-[1rem] lg:gap-[.5rem] lg:flex-row lg:items-center lg:justify-center p-[.5rem] lg:p-0 shadow-lg lg:px-[.5rem]">
+          <input type="email" placeholder="Email" className="border w-[100%] lg:w-[60%] h-[3rem] lg:h-[4rem] lg:border-none outline-none "   />
+          <button className=" lg:flex-shrink-0">{btn1}</button>
+        </div>
       </div>
+
+
+      <div className="flex justify-center items-center mt-[5rem]">
+      <iframe className="w-[90%] h-[30rem]"
+        src="https://www.youtube.com/embed/P0IpabtSe6g?autoplay=1&rel=0&mute=1&vq=hd1080p"
+      ></iframe>
+    </div>
+
     </div>
   );
 };
